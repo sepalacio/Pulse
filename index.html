@@ -1,59 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta description="Proyecto de diseño web con Html5, CSS3, Javascript"/><!--Cuando se realiza una busqueda en google, esta es la descripción que aparece debajo de la url de la página-->
+		<meta charset="utf-8" />
+		<meta name="description" content="Proyecto de diseño web con Html5, CSS3, Javascript"/><!--Cuando se realiza una busqueda en google, esta es la descripción que aparece debajo de la url de la página-->
+		<meta name="viewport"	content="width=device-width, minimum-scale=1, maximum-scale=1" /><!--Visualizar el contenido sin zoom al 100%-->
 		<title>Pulse</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/normalize.css" /><!--Codigo para resetear el css en la mayoria de los navegadores -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/prefixfree.js"></script><!--Libreria utilizada para evitar los prefijos en la hoja de estilos (webkit,moz,o,ms) -->		
 	</head>
 	<body>
-		<header id="header" class="">
+		<header>
 			<figure id="logo">
 					<img src="images/logos.png" />
-			</figure><!--Etiqueta para imagenes-->
-			<H1>
-				Pulse 2014 Design
-			</H1>
+			</figure><!--Etiqueta para <imagenes--></imagenes-->
+			<h1>
+				This website counts with responsive design for a good view in most devices.
+			</h1>
 			<figure id="avatar">
 				<img src="images/avatar.jpg" />			
 			</figure>
 		</header><!-- /header -->
 		<nav><!--Barra de navegacion-->	
 			<ul>
-				<li><a href="#">Python</a></li>
-				<li><a href="#">HTML5</a></li>
-				<li><a href="#">Javascript</a></li>
-				<li><a href="#">CSS3</a></li>
-				<li><a href="#">Django	</a></li>
+				<li><a href="#" class="menu-item">Python</a></li>
+				<li><a href="#" class="menu-item">HTML5</a></li>
+				<li><a href="#" class="menu-item">Javascript</a></li>
+				<li><a href="#" class="menu-item">CSS3</a></li>
+				<li><a href="#" class="menu-item">Django	</a></li>
 				<li id="publicar_nav">
-					<a href="#">Publicar</a>
+					<a href="#" id="show-form" class="icon-pen">Publish</a>
 				</li>			
 			</ul>	
 		</nav>
+		<form action="" id="formulario" class="formu">
+			<input type="text" id="titulo" placeholder="Titulo" required />
+			<input type="url" id="url" placeholder="Enlace" required />
+			<input type="submit" class="icon-pencil" value="Agregar" />
+		</form>
+
 		<section id="contenido">
+
 			<article class="item">
 				<figure class="image_item">
 					<img src="images/imagen.jpg"/>				
 				</figure>
 				<h2 class="titulo_item">
 					<a href="#">
-						Titulo del articulo
+						Imágenes en diseño web adaptativo: picture, sizes y srcset
 					</a>
 				</h2>
 				<div class="autor_item">
-					Por<a href="#">Andres Ricaurte</a>
+					Por <a href="#">Andres Ricaurte</a>
 				</div>	
 				<div class="datos_item">
-					<a href="#" class="tag_item">Animales</a>
+					<a href="#" class="tag_item">Share</a>
 					<span class="fecha_item">
-						hace<strong>5</strong>min 
-					</span>
-					<a href="#" class="comentarios_item">576</a>
-					<a href="#" class="guardar_item"></a>	
+						hace <strong>5</strong> min 
+					</span>					
 				</div>
 				<div class="votacion">
-					<a href="#" class="up"></a>
-					540
-					<a href="#" class="down"></a>
+					<a href="#" class="up icon-triangle-up"> </a> 					
+					<a href="#" class="down icon-triangle-down"></a>
+					<a href="#" class="comentarios_item icon-star"> 576</a>
+					<a href="#" class="guardar_item"></a>	
+				</div>					
+			</article>	
+
+				<article class="item">
+				<figure class="image_item">
+					<img src="images/imagen.jpg"/>				
+				</figure>
+				<h2 class="titulo_item">
+					<a href="#">
+						Google añade el HTTPS como señal en los rankings de las búsquedas
+					</a>
+				</h2>
+				<div class="autor_item">
+					Por <a href="#">Hector Heredia</a>
+				</div>	
+				<div class="datos_item">
+					<a href="#" class="tag_item">Share</a>
+					<span class="fecha_item">
+						hace <strong>5</strong> min 
+					</span>					
+				</div>
+				<div class="votacion">
+					<a href="#" class="up icon-triangle-up"></a>
+					
+					<a href="#" class="down icon-triangle-down"></a>
+					<a href="#" class="comentarios_item icon-star"> 576</a>
+					<a href="#" class="guardar_item"></a>	
+				</div>					
+			</article>	
+
+				<article class="item">
+				<figure class="image_item">
+					<img src="images/imagen.jpg"/>				
+				</figure>
+				<h2 class="titulo_item">
+					<a href="#">
+						Nuevo modo de emulación de móviles en las herramientas de Chrome
+					</a>
+				</h2>
+				<div class="autor_item">
+					Por <a href="#">Sandra Castaño</a>
+				</div>	
+				<div class="datos_item">
+					<a href="#" class="tag_item">Share</a>
+					<span class="fecha_item">
+						hace <strong>5</strong> min 
+					</span>					
+				</div>
+				<div class="votacion">
+					<a href="#" class="up icon-triangle-up"></a>
+					
+					<a href="#" class="down icon-triangle-down"></a>
+					<a href="#" class="comentarios_item icon-star"> 576</a>
+					<a href="#" class="guardar_item"></a>	
+				</div>					
+			</article>	
+
+				<article class="item">
+				<figure class="image_item">
+					<img src="images/imagen.jpg"/>				
+				</figure>
+				<h2 class="titulo_item">
+					<a href="#">
+						Cómo corregir la calidad de las fuentes en Google Chrome
+					</a>
+				</h2>
+				<div class="autor_item">
+					Por <a href="#">Pablo Lourent</a>
+				</div>	
+				<div class="datos_item">
+					<a href="#" class="tag_item">Share</a>
+					<span class="fecha_item">
+						hace <strong>5</strong> min 
+					</span>					
+				</div>
+				<div class="votacion">
+					<a href="#" class="up icon-triangle-up"></a>
+					
+					<a href="#" class="down icon-triangle-down"></a>
+					<a href="#" class="comentarios_item icon-star"> 576</a>
+					<a href="#" class="guardar_item"></a>	
 				</div>					
 			</article>	
 		</section>	
@@ -65,5 +157,7 @@
 				2014
 			</p>				
 		</footer>
+		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="js/scriptfile.js"></script>
 	</body>
 </html>
