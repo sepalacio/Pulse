@@ -1,3 +1,6 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('fuentes/icomoon.eot?2pixao');
@@ -28,7 +31,7 @@
 	font-size: 1.5em;
 	color: #FFBE2C;	
 	position: relative;
-	top: 0.1em;	
+	top: 0.2em;	
 }
 .icon-triangle-down:before {
 	content: "\f05b";
@@ -49,22 +52,8 @@
 	font-size: 1em;
 	color: white;
 	margin-right: 0.8em;	
-	-webkit-transition: 0.3s;
+	transition: 0.3s;
 }
-
-.icon-pencil:before {
-    content: "\e600";
-    font-size: 1.5em;
-    color: #74AC05;
-    -webkit-transition: 0.3s;
-}
-
-.icon-pencil:before:hover
-{
-	color: #2B2B2B ;
-}
-
-
 
 body
 {
@@ -208,7 +197,7 @@ nav ul #publicar_nav a
 
 nav ul #publicar_nav a:hover:before
 {
-	-webkit-transform: scale(1.5, 1.5);
+	transform: scale(1.5, 1.5);
 	color: #FFBE2C;	
 }
 
@@ -219,7 +208,7 @@ nav ul li a
 	display: block;
 	padding: 0.4em;
 	text-decoration: none;
-	-webkit-transition: 0.3s;
+	transition: 0.3s;
 }
 
 nav ul li .menu-item:hover
@@ -341,9 +330,9 @@ nav ul li a:active
 	margin-top: 3px;
 	padding: 0.2em 0.5em 0 1em;
 	position: absolute;
-	left: 5%;
+	left: 3%;
+	right: 3%;
 	top: 100%;
-	width: 90%;
 }
 
 #contenido .item .votacion a
@@ -355,6 +344,13 @@ nav ul li a:active
 #contenido .item .votacion .guardar_item
 {
 	float: right;
+}
+
+#geo
+{
+	margin: 1em;
+	position: relative;
+	left: 38%;
 }
 
 /*Media queries: selector css que se encargan de averiguar 

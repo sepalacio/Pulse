@@ -1,3 +1,8 @@
+
+window.onload = function(){
+				console.log('Ya se disparo el evento onLoad');
+			}
+
 var $form = $('#formulario'),
 	$titulo = $('#titulo'),
 	$url = $('#url'),
@@ -5,9 +10,20 @@ var $form = $('#formulario'),
 	$list = $('#contenido'),
 	$post = $('.item').first();
 
-function mostrarFormulario () {
-	$form.slideToggle();
-	return false;
+if (localStorage.getItem('autosave')){//si exite y tiene un valor
+
+	$titulo.val(sessionStorage.getItem('titulo'));
+	$url.val(sessionStorage.getItem('url'));
+}
+
+var id = setInterval( function(){//funcion JavaScript que se ejecuta cada x cantidad de segundos
+	sessionStorage.setItem('titulo', $titulo.val());
+	sessionStorage.setItem('url', $url.val());
+} ,1000 );
+
+function mostrarFormulario () {	
+	$form.slideToggle();	
+	tito.preventDefault();
 }
 
 function agregarPost () {
@@ -21,9 +37,13 @@ function agregarPost () {
 
 		$clone.hide();		
 		$list.prepend($clone);
-		$clone.fadeIn();	
+		$clone.fadeIn();
 
-		return false;  
+		$titulo.val('');
+		$url.val('');	
+
+		mostrarFormulario();
+		tito.preventDefault(); 
 }
 
 //eventos

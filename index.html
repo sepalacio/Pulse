@@ -4,8 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="description" content="Proyecto de diseño web con Html5, CSS3, Javascript"/><!--Cuando se realiza una busqueda en google, esta es la descripción que aparece debajo de la url de la página-->
 		<meta name="viewport"	content="width=device-width, minimum-scale=1, maximum-scale=1" /><!--Visualizar el contenido sin zoom al 100%-->
-		<title>Pulse</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
+		<title>Pulse</title>		
 		<link rel="stylesheet" href="css/normalize.css" /><!--Codigo para resetear el css en la mayoria de los navegadores -->
 		<link rel="stylesheet" href="css/styles.css" />
 		<script src="js/prefixfree.js"></script><!--Libreria utilizada para evitar los prefijos en la hoja de estilos (webkit,moz,o,ms) -->		
@@ -19,7 +18,7 @@
 				This website counts with responsive design for a good view in most devices.
 			</h1>
 			<figure id="avatar">
-				<img src="images/avatar.jpg" />			
+				<!---<img src="images/avatar.jpg" />ESTA IMAGEN SE CARGARÁ POR MEDIO DE AJAX Y LA RUTA EN UN JSON-->
 			</figure>
 		</header><!-- /header -->
 		<nav><!--Barra de navegacion-->	
@@ -37,9 +36,8 @@
 		<form action="" id="formulario" class="formu">
 			<input type="text" id="titulo" placeholder="Titulo" required />
 			<input type="url" id="url" placeholder="Enlace" required />
-			<input type="submit" class="icon-pencil" value="Agregar" />
-		</form>
-
+			<input type="submit" value="Agregar" />
+		</form>		
 		<section id="contenido">
 
 			<article class="item">
@@ -149,6 +147,8 @@
 				</div>					
 			</article>	
 		</section>	
+		<div id="clima"></div>
+		<div id="geo"></div>
 		<footer>
 			<p>
 				<strong>Powered by Seb@sP</strong>
@@ -159,5 +159,14 @@
 		</footer>
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 		<script src="js/scriptfile.js"></script>
+		<script src="js/geo.js"></script>
+		<script src="js/ajax.js"></script>
+		<script>			
+			//FUNCION QUE SE ACTIVA CUANDO EL EVENTO DomContentLoaded ESTÁ LISTO
+			$( function(){
+				
+			});
+		</script>
+
 	</body>
 </html>
